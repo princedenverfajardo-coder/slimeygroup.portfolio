@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shotgun Slime hunter 2d</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">SHOTGUN SLIME HUNTER 2D</div>
+            <ul class="nav-links">
+                <li><a href="#" data-page="project" class="nav-link active">Project</a></li>
+                <li><a href="#" data-page="team" class="nav-link">Team</a></li>
+                <li><a href="#" data-page="flowchart" class="nav-link">Flowchart</a></li>
+                <li><a href="#" data-page="game" class="nav-link">Game Info</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="project" class="page active">
+        <h1 class="section-title"><span style="color: #000000;">SHOTGUN SLIME HUNTER 2D</span></h1>
+        <p style="font-family: Impact, sans-serif; font-size: 1.3rem; max-width: 800px; margin: 0 auto;"><span style="color: #000000;">Be the best at shooting down the slimes that are collonizing the kingdom</span></p>
+        <img src="c:\Users\Dens\Downloads\SHOTGUN SLIME 2D.jpg" alt="Game" class="game-screenshot">
+        <p style="font-family: Impact, sans-serif; font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+            Dodge the <span style="color: #ff4444; font-size: 1.5rem;">Obstacles</span> and Shoot the slimes, Do you have what it takes to beat The slimes?
+        </p>
+    </section>
+
+    <section id="team" class="page">
+        <h2 class="section-title" style="color: #2c3e50;">SLIMEY GROUP</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="c:\Users\Dens\Downloads\dens.jpg" alt="Dens">
+                </div>
+                <h3 class="member-name">Prince Denver</h3>
+                <p class="member-role">Lead Developer</p>
+                <p class="member-desc">Built the entire Pygame catching game masterfully!</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="c:\Users\Dens\Downloads\ken.jpg" alt="Ken Renille">
+                </div>
+                <h3 class="member-name">Ken Renille</h3>
+                <p class="member-role">UI/UX Designer</p>
+                <p class="member-desc">Created stunning visuals and smooth animations!</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="c:\Users\Dens\Downloads\russel.jpg" alt="RUssel Galves">
+                </div>
+                <h3 class="member-name">Russel Galvez</h3>
+                <p class="member-role">Tester</p>
+                <p class="member-desc">Ensured perfect gameplay and zero bugs!</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="c:\Users\Dens\Downloads\judy.jpg" alt="Doria Judy">
+                </div>
+                <h3 class="member-name">Doria Judy</h3>
+                <p class="member-role">Project Manager</p>
+                <p class="member-desc">Delivered this project on time and budget!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="flowchart" class="page">
+        <h2 class="section-title" style="color: white;">Game Flowchart</h2>
+        <img src="c:\Users\Dens\Downloads\origflowchart.jpg" alt="Flowchart" class="flowchart-img">
+
+        <h4>Phase 1: Initialization and Game States</h4>
+        <p>Startup: The game begins by initializing Pygame and game settings.</p>
+        <br>
+        <p>Main Loop: The game enters a continuous loop that checks the current state: Loading, Game Over, or Playing.</p>
+        <br>
+        <p>Game Over Logic: If the state is "Game Over," it draws the game over screen and waits for the player to press "R" to reset the game to its initial state (3 lives, 0 score) and return to "Playing".</p>
+        <br>
+        <br>
+
+        <h4>Phase 2: Core Gameplay Mechanics</h4>
+        <p>When in the "Playing" state, the loop handles the following sequentially:</p>
+        <br>
+        <p>Events & Timers: Processes user input (move, fire, quit) and updates the projectile reload timer.</p>
+        <br>
+        <p>Dynamic Difficulty: Spawns objects based on score milestones. The "Danger" level increases with the score, ranging from 45% at 5,000+ to 75% at 20,000+.</p>
+        <br>
+        <p>Combat: Checks if the fire button was pressed and the weapon is reloaded. If so, it fires three projectiles with a spread and resets the reload timer.</p>
+        <br>
+        <br>
+
+        <h4>Phase 3: Collision and Rendering</h4>
+        <br>
+        <p>Projectile Hits: If a projectile hits a research point, the player earns double points, and both the point and projectile are removed.</p>
+        <br>
+        <p>Player Collisions: If the player collides with an obstacle, they lose a life. If lives reach zero, the state shifts to "Game Over".</p>
+        <br>
+        <p>Rendering: Finally, the loop draws all active elements (player, points, obstacles, and UI) to the screen and regulates the frame rate via Clock.tick(FPS).</p>
+    </section>
+
+    <section id="game" class="page">
+        <h2 class="section-title" style="color: white;">Game Features</h2>
+        <div class="game-features">
+            <div class="feature"><i class="fas fa-gamepad" style="font-size: 3rem; color: gold;"></i>
+                <h4>Easy Controls</h4>
+                <p>Arrow keys, Left and Right, and Space Bar</p>
+            </div>
+            <div class="feature"><i class="fas fa-trophy" style="font-size: 3rem; color: #3d07ff;"></i>
+                <h4>High Score</h4>
+                <p>Dodge the Red box and beat your high score</p>
+            </div>
+            <div class="feature"><i class="fas fa-gamepad" style="font-size: 3rem; color: #a2f801;"></i>
+                <h4>Fast Reflexes</h4>
+                <p>Be fast at dodging the Obstacles</p>
+            </div>
+            <div class="feature"><i class="fas fa-gamepad" style="font-size: 3rem; color: #ff0707;"></i>
+                <h4>Shooting</h4>
+                <p>Shoot the Slimes</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>2026 SHOTGUN SLIME HUNTER 2D | Pygame</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
